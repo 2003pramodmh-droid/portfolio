@@ -1,69 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio with html</title>
-    <style>
-        html{
-            scroll-behavior: smooth;
-        }
-    </style>
+    <meta name="description"
+        content="Portfolio of Pramod MH - Full Stack Web Developer showcasing projects, experience, and skills">
+    <meta name="keywords" content="portfolio, web developer, full stack, java developer, pramod mh">
+    <meta name="author" content="Pramod MH">
+    <title>Portfolio | Pramod MH - Full Stack Web Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconn ect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <h1>Pramod MH-Full Stack Developer</h1>
-    <p>Welcome to my Portfolio website! Use the navigation below to explore: </p>
-    <ul>
-        <li><a href="#about me">About Me</a></li>
-        <li><a href="#Skills">Skills</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        <li><a href="/day1/Pramod_MH_Resume_v3 (1).pdf" target="_blank" download>Download Resume</a></li>
-    </ul>
-    <h1 id="about me">About Me</h1>
-    <p>I am a passionate Full Stack Developer with experties with both Frontend and Backend Technologies.
-        You can check my GitHub profile for open-souce contributions:
-    </p>
-    <a href="https://github.com/2003pramodmh-droid?tab=repositories" target="_blank">Visit my GitHub</a>
-    <h3 id="Skills">Skills</h3>
-    <ul>
-        <li>HTML,CSS,Javascript</li>
-        <li>Core Java, JDBC,JEE,Spring,Hibernate</li>
-        <li>MySQL</li>
-        <li>Networking</li>
-        <li>Excellent Communication Skills</li>
-    </ul>
-    <h2>Learning Goals</h2>
-    <ol>
-        <li>Advanced Frontend Development</li>
-        <ul>
-            <li>React.js</li>
-            <li>Next.js</li>
-        </ul>
-        <li>AI Integration in Web Apps</li>
-    </ol>
-    <h2>Tech Glossary</h2>
-    <dl>
-        <dt>API</dt>
-        <dd>Application Programming Interface for System Communication.</dd>
-        <dt>CI/CD</dt>
-        <dd>Continuous Integration and Continuous Deployment practices.</dd>
-    </dl>
 
-    <h2 id="Projects">Projects</h2>
-    <ul>
-        <li><a href="">Task Manager App</a></li>
-        <li><a href="">Weather Dashboard</a></li>
-        <li><a href="">Portfolio</a></li>
-    </ul>
-    <h2 id="Contact">Contact</h2>
-    <ul>
-        <li>Email: <a href="mailto: 2003.pramodmh@gmail.com" >2003.pramodmh@gmail.com</a></li>
-        <li>Phone: <a href="tel: 8296160245">+91 8296160245</a></li>
-    </ul>
-    <label>Connect with me via: <a href="https://www.linkedin.com/in/pramod-mh-99240525b/" target="_blank"><img src="linkedin.png" height="30" width="30"></a>&nbsp;&nbsp;
-        <a href="https://github.com/2003pramodmh-droid?tab=repositories" target="_blank"><img src="github.png" height="30"width="30"></a></label>
-    <p><a href="">Back to Top</a></p>
+<body>
+    <!-- Loader Section -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-text">Pramod MH</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-title">Pramod MH</h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Enthusiastic and detail-oriented Electronics and Communication Graduate currently pursuing Full
+                    Stack Development.
+                    Strong foundation in Java programming with a passion for delivering high-quality software solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary liquid-glass" id="downloadResume">
+                        <span class="btn-text">Download Resume</span>
+                        <i class="fas fa-download"></i>
+                        <span class="glow"></span>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <span class="btn-text">Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img-wrapper">
+                        <img src="images/profile.jpg" alt="Pramod MH" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Showcasing my recent work and achievements</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="Portfolio Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/2003pramodmh-droid?tab=repositories" target="_blank"
+                                    class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Professional Portfolio</h3>
+                        <p class="project-description">
+                            A responsive portfolio website showcasing my skills in web development with modern design
+                            and smooth animations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="TicTacToe Game">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/2003pramodmh-droid/TicTacToe-JAVA" target="_blank"
+                                    class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">TicTacToe Game</h3>
+                        <p class="project-description">
+                            Interactive game built with Core Java featuring object-oriented programming, conditionals,
+                            loops, and game logic.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Core Java</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">Game Logic</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project3.jpg" alt="Full Stack Application">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/2003pramodmh-droid?tab=repositories" target="_blank"
+                                    class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Full Stack Web Application</h3>
+                        <p class="project-description">
+                            Capstone project featuring database integration, responsive UI, Java 8 features, and
+                            full-stack architecture.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My professional journey and academic background</p>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">Jul 2025 - Present</span>
+                            <h3 class="timeline-title">Trainee - Full Stack Development</h3>
+                            <h4 class="timeline-company">Tap Academy, Bangalore</h4>
+                            <p class="timeline-description">
+                                Currently pursuing comprehensive full stack development training with focus on Java,
+                                Spring, Hibernate, and modern web technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">Oct 2024 - Dec 2024</span>
+                            <h3 class="timeline-title">Intern</h3>
+                            <h4 class="timeline-company">Candela Technologies, Bangalore</h4>
+                            <p class="timeline-description">
+                                Gained hands-on experience in software development and worked on real-world projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2021 - 2025</span>
+                            <h3 class="timeline-title">BE/B.Tech - Electronics & Communication</h3>
+                            <h4 class="timeline-company">Acharya Institute Of Technology, VTU</h4>
+                            <p class="timeline-description">
+                                Graduated with 7.89 CGPA - Strong foundation in electronics, programming, and technical
+                                problem-solving.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Tools and technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend & Database</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Core Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>Advanced Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Hibernate</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>JDBC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools & Concepts</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>OOP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>DBMS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Networking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's create something amazing together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:2003.pramodmh@gmail.com">2003.pramodmh@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+918296160245">+91 8296160245</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Bangalore, India</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/pramod-mh-99240525b" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/2003pramodmh-droid?tab=repositories" target="_blank"
+                            class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pramo_d8695/" target="_blank" class="social-link"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-input" rows="5" placeholder="Your Message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    &copy; <span id="currentYear"></span> Pramod MH. All rights reserved.
+                </p>
+                <p class="footer-subtext">
+                    Designed & Built with <i class="fas fa-heart"></i> by Pramod MH
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/constants.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
